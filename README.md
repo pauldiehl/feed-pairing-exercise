@@ -1,12 +1,12 @@
 # .FEED. - Pairing Exercise
 
 ## Story #1 
-As a user I want to create and store a new posting 
+As a user I want to create and store a new post 
 
 ## A/C
-- WHEN I enter in a new posting within the designated input field
+- WHEN I enter in a new post within the designated input field
 - AND I click save
-- THEN the new posting is saved to DB
+- THEN the new post is saved to DB
 
 ## Technical
 - FE: Blank Create React App + Jest/RTL

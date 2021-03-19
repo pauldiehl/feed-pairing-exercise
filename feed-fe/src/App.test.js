@@ -3,8 +3,6 @@ import userEvent from "@testing-library/user-event";
 import App from './App';
 
 test('enter text and click save should make POST call to /api/posts with correct body', async () => {
-  fetch.resetMocks();
-  fetch.mockResponseOnce("")
   render(<App />);
   const sampleText = "some test entry";
   const samplePayload = { post: sampleText };

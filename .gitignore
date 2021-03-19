@@ -6,6 +6,7 @@
 .pnp.js
 **/.idea
 **/*.iml
+feed-be/store.json
 
 # testing
 /coverage

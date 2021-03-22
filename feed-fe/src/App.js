@@ -1,29 +1,29 @@
-import { useState, createRef } from 'react';
+import { useState } from 'react';
 import './App.css';
 
 function App() {
 
     const [post, setPost] = useState("");
 
-    const inputRef = createRef();
-
     const handlePost = async () => {
-        const options = {
+        await fetch('/api/posts', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify( { post })
-        }
-
-        await fetch('/api/posts', options)
+        })
     }
 
     return (
         <div className="App">
             <header className="App-header">
-                <textarea ref={inputRef} onChange={() => setPost(inputRef.current.value)} />
-                <button onClick={handlePost}>Save</button>
+                <form onSubmit={handlePost}>
+                    <textarea
+                        onChange={(e) => setPost(e.target.value)}
+                    />
+                    <input type="submit" />
+                </form>
             </header>
         </div>
     );
